@@ -3,6 +3,7 @@ using Entities.Concretes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,9 +33,19 @@ namespace DataAccess.Concretes.InMemory
             return _cars;
         }
 
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
         public Car GetById(Car car)
         {
             return _cars.SingleOrDefault(c => c.Id == car.Id);
+        }
+
+        public Car GetById(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Car car)

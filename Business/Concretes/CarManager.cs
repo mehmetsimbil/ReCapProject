@@ -32,10 +32,7 @@ namespace Business.Concretes
             return _carDal.GetAll();
         }
 
-        public Car GetById(Car car)
-        {
-            return _carDal.GetById(car);
-        }
+        
 
         public void Update(Car car)
         {
